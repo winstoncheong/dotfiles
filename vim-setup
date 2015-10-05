@@ -1,0 +1,8 @@
+cp vimrc $HOME/.vimrc
+
+if [[ ! -e ~/.vim/bundle/Vundle.vim ]]; then
+	git clone http://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
+fi
+
+vim +PluginInstall +qall # Does the plugin installation
+
