@@ -15,6 +15,8 @@ syntax on
 " Whitespace
 set ts=4 sts=4 sw=4 noex " Tabbing settings
 set autoindent smartindent
+set list
+set listchars=tab:▸\ ,eol:¬
 
 
 " Searching {{{
