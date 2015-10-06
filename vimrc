@@ -38,7 +38,7 @@ set history=50
 
 " View
 set showcmd
-set cursorline
+"set cursorline
 
 " Persistent undo
 if has('persistent_undo')
@@ -46,4 +46,9 @@ if has('persistent_undo')
   set undolevels=500
   set undoreload=500
 endif
+
+" Remove unwanted spaces on write
+autocmd FileType c,cpp,java,php,tex autocmd BufWritePre <buffer> :%s/\s\+$//e
+
+
 " }}}
