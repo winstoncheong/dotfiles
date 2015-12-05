@@ -5,6 +5,8 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
 Plugin 'tpope/vim-git'
+Plugin 'scrooloose/nerdtree'
+
 call vundle#end()
 
 filetype plugin indent on
@@ -50,5 +52,7 @@ endif
 " Remove unwanted spaces on write
 autocmd FileType c,cpp,java,php,tex autocmd BufWritePre <buffer> :%s/\s\+$//e
 
+" NERDTree mappings
+noremap <C-n> :NERDTreeToggle<CR>
 
 " }}}
