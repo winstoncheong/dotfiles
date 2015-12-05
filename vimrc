@@ -7,6 +7,10 @@ Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
 Plugin 'tpope/vim-git'
 Plugin 'scrooloose/nerdtree'
 
+" Snippets
+Plugin 'SirVer/ultisnips' " The engine
+Plugin 'honza/vim-snippets' "The snippets
+
 call vundle#end()
 
 filetype plugin indent on
@@ -54,5 +58,17 @@ autocmd FileType c,cpp,java,php,tex autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " NERDTree mappings
 noremap <C-n> :NERDTreeToggle<CR>
+
+
+" }}}
+
+" Plugin configuration {{{
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
 
 " }}}
