@@ -1,3 +1,4 @@
+" Vundele plugin setup -------------------------------------- {{{
 set nocompatible " Required preamble for Vundle
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -31,15 +32,16 @@ Plugin 'SirVer/ultisnips' " The engine
 
 Plugin 'ervandew/supertab' " Tab for insert completion
 
-
 Plugin 'ctrlpvim/ctrlp.vim' " Fuzzy file, buffer, mru, tag, etc finder
+
+" Plugin 'jceb/vim-orgmode' "Org-Mode implemented in vim. Needs python
 
 
 
 call vundle#end()
 
 filetype plugin indent on
-
+" }}}
 " GENERAL SETTINGS {{{1
 syntax on
 set number
@@ -54,9 +56,8 @@ set t_Co=256
 
 " Folding {{{2
 set foldenable
-set foldminlines=10
+"set foldminlines=10
 " }}}2
-
 " Whitespace {{{2
 
 " Tabbing settings
@@ -69,8 +70,6 @@ set smartindent
 set list
 set listchars=tab:▸\ ,eol:¬,precedes:<,extends:>
 " }}}2
-"
-
 " Searching {{{2
 set hlsearch incsearch
 set ignorecase smartcase
@@ -98,7 +97,6 @@ if has('persistent_undo')
 endif
 
 " }}}1
-
 " AUTOCOMMANDS {{{1
 " Remove unwanted spaces on write
 autocmd FileType c,cpp,java,php,tex autocmd BufWritePre <buffer> :%s/\s\+$//e
@@ -108,15 +106,18 @@ autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 " Source the vimrc file after saving it
 autocmd bufwritepost .vimrc source $MYVIMRC 
 
-
-"}}}1
-
+" Vimscript file settings -------------------------------- {{{
+augroup filetype_vim
+	autocmd!
+	autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
+" }}}1
 " FUNCTIONS {{{1
 function! MoveBlockDown()
     execute ":silent! \'<, \'>move .+1"
 endfunction
 " }}}1
-
 " MAPPINGS {{{1
 nmap <F2> :PluginInstall<CR>
 nmap <F3> :PluginUpdate<CR>
@@ -153,8 +154,6 @@ nnoremap zO zCzO
 "}}}
 
 "}}}1
-
-
 " Plugin configuration {{{1
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<tab>"
