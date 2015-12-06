@@ -10,5 +10,7 @@ fi
 # set up git
 $DIR/git-setup
 
-
+if [[ -e $HOME/.vimrc ]]; then
+	mv $HOME/.vimrc $HOME/.vimrc.bak
+fi
 ln -s $DIR/vimrc $HOME/.vimrc
