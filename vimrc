@@ -20,7 +20,7 @@ Plugin 'scrooloose/nerdcommenter' " Easy code commenting
 Plugin 'scrooloose/syntastic' " Syntax checking
 
 Plugin 'nelstrom/vim-markdown-folding' " Enables folding by section headings in markdown documents
-" Plugin 'tpope/vim-markdown'
+Plugin 'tpope/vim-markdown'
 
 " Plugin 'Valloric/YouCompleteMe' " Needs python
 Plugin 'scrooloose/nerdtree'
@@ -39,7 +39,7 @@ Plugin 'ctrlpvim/ctrlp.vim' " Fuzzy file, buffer, mru, tag, etc finder
 Plugin 'edsono/vim-matchit' " Makes '%' match more.
 
 Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+" Plugin 'plasticboy/vim-markdown'
 
 Plugin 'christoomey/vim-tmux-navigator' "Seamless navigation between tmux panes and vim splits
 
