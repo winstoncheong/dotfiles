@@ -20,7 +20,7 @@ Plugin 'scrooloose/nerdcommenter' " Easy code commenting
 Plugin 'scrooloose/syntastic' " Syntax checking
 
 Plugin 'nelstrom/vim-markdown-folding' " Enables folding by section headings in markdown documents
-Plugin 'tpope/vim-markdown'
+" Plugin 'tpope/vim-markdown'
 
 " Plugin 'Valloric/YouCompleteMe' " Needs python
 Plugin 'scrooloose/nerdtree'
@@ -34,9 +34,20 @@ Plugin 'ervandew/supertab' " Tab for insert completion
 
 Plugin 'ctrlpvim/ctrlp.vim' " Fuzzy file, buffer, mru, tag, etc finder
 
-" Plugin 'jceb/vim-orgmode' "Org-Mode implemented in vim. Needs python
+" Plugin 'jceb/vim-orgmode' " Org-Mode implemented in vim. Needs python
+
+Plugin 'edsono/vim-matchit' " Makes '%' match more.
+
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
+
+Plugin 'christoomey/vim-tmux-navigator' "Seamless navigation between tmux panes and vim splits
 
 
+" Color schemes
+Plugin 'farseer90718/flattr.vim'
+Plugin 'tomasr/molokai'
+Plugin 'altercation/vim-colors-solarized'
 
 call vundle#end()
 
@@ -86,6 +97,7 @@ set history=1000
 set showcmd
 set ruler
 set laststatus=2
+set statusline=%F%m%r%h%w\ " fullpath and status modified sign
 "set cursorline
 "}}}2
 
