@@ -6,6 +6,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
 
+Plugin 'tpope/vim-sleuth' " Look at current filetype, to adjust vim's tab spacing settings
 Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-fugitive' " Git integration
 Plugin 'airblade/vim-gitgutter' " Shows a git diff in the 'gutter'
