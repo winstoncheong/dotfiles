@@ -21,3 +21,4 @@ git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(ye
 git config --global alias.diffstat 'diff --stat -r'
 git config --global alias.changes 'diff --name-status -r'
 git config --global alias.lc 'log ORIG_HEAD.. --stat --no-merges'
+git config --global core.pager 'less -+F'
