@@ -9,7 +9,7 @@ ln -s "$DIR"/bashrc $HOME/.bashrc
 
 # set up vim
 if [[ ! -e ~/.vim/bundle/Vundle.vim ]]; then
-	git clone http://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
+	git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/Vundle.vim
 fi
 
 if [[ -e $HOME/.vimrc ]]; then
