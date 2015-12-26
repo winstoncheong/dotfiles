@@ -3,7 +3,7 @@ set nocompatible " Required preamble for Vundle
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
 
 Plugin 'tpope/vim-sleuth' " Look at current filetype, to adjust vim's tab spacing settings
