@@ -7,7 +7,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
 
 Plugin 'tpope/vim-sleuth' " Look at current filetype, to adjust vim's tab spacing settings
-Plugin 'tpope/vim-git'
+"Plugin 'tpope/vim-git'
 Plugin 'tpope/vim-fugitive' " Git integration
 Plugin 'airblade/vim-gitgutter' " Shows a git diff in the 'gutter'
 
@@ -112,8 +112,15 @@ endif
 
 " }}}1
 " AUTOCOMMANDS {{{1
+
+" save on focus lost
+autocmd FocusLost * :wall
+
 " Remove unwanted spaces on write
 autocmd FileType c,cpp,java,php,tex autocmd BufWritePre <buffer> :%s/\s\+$//e
+
+" Adjust tabsize appearance for files
+autocmd FileType eruby,html,vim,ruby,css,javascript setlocal tabstop=2 shiftwidth=2
 
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
