@@ -12,6 +12,7 @@ Plugin 'tpope/vim-fugitive' " Git integration
 Plugin 'airblade/vim-gitgutter' " Shows a git diff in the 'gutter'
 
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-unimpaired' " pairs of handy bracket mappings. :e
 Plugin 'tpope/vim-abolish' " Supports the operations of Abbreviation (Abolish), Substitute (Subvert) and Coercion
@@ -35,7 +36,7 @@ Plugin 'ervandew/supertab' " Tab for insert completion
 
 Plugin 'ctrlpvim/ctrlp.vim' " Fuzzy file, buffer, mru, tag, etc finder
 
-" Plugin 'jceb/vim-orgmode' " Org-Mode implemented in vim. Needs python
+Plugin 'jceb/vim-orgmode' " Org-Mode implemented in vim. Needs python
 
 Plugin 'edsono/vim-matchit' " Makes '%' match more.
 
