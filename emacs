@@ -27,6 +27,9 @@
      (emacs-lisp . t)   
    ))
 
+; use latexmk when building latex
+(setq org-latex-to-pdf-process (list "latexmk -pdf %f"))
+
 (require 'ob)
 
 
