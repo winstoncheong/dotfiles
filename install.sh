@@ -1,5 +1,7 @@
 #!/bin/bash
-DIR=$(cd $(dirname ${0}) && pwd)
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+echo "dotfiles are stored in '$DIR'"
 
 # set up bashrc
 if [[ -e $HOME/.bashrc ]]; then
