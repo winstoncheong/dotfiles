@@ -1,10 +1,12 @@
-" Vundele plugin setup -------------------------------------- {{{
+" Vundle plugin setup -------------------------------------- {{{
 set nocompatible " Required preamble for Vundle
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
+" Plugin 'git://git.code.sf.net/p/vim-latex/vim-latex'
+Plugin 'vim-latex/vim-latex'
+" Plugin 'lervag/vimtex'
 
 Plugin 'tpope/vim-sleuth' " Look at current filetype, to adjust vim's tab spacing settings
 "Plugin 'tpope/vim-git'
@@ -105,9 +107,10 @@ set statusline=%F%m%r%h%w\ " fullpath and status modified sign
 
 " Persistent undo
 if has('persistent_undo')
+  set undodir=$HOME/Dropbox/undodir
   set undofile
   set undolevels=500
-  set undoreload=500
+  set undoreload=5000
 endif
 
 " }}}1
