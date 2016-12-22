@@ -6,6 +6,9 @@
 # Add texlive to path 
 PATH=/usr/local/texlive/2014/bin/i386-linux:$PATH 
 
+# Add my scripts to path
+PATH=~/Dropbox/scripts:$PATH
+
 # BASH PROMPT
 # PS1='(\[\e[1;31m\]\j\[\e[0m\]) \u \[\e[1;34m\]\w\[\e[0m\] \[\e[0;32m\]\$\[\e[0m\] '
 # PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ ' # From Kali
