@@ -1,10 +1,13 @@
-#! /bin/bash
+#!/bin/bash
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
 # Add texlive to path 
 PATH=/usr/local/texlive/2014/bin/i386-linux:$PATH 
+
+# Add to tex search path, so kpsewhich can find my .sty and .bib
+export TEXINPUTS=".:~/Dropbox/workspace/"
 
 # Add my scripts to path
 PATH=~/Dropbox/scripts:$PATH
@@ -62,6 +65,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias lar="ls -laR"
 alias up='cd ..'
+alias latexmk='latexmk -pdf -cd -shell-escape -synctex=1'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
