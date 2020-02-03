@@ -8,8 +8,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'vim-latex/vim-latex'
 
-" NERD tree will be loaded on the first invocation of NERDTreeToggle command
-Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdtree'
 
 
 " color scheme
