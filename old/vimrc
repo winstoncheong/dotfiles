@@ -58,8 +58,9 @@ set number
 set autoread
 set confirm
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
-set scrolloff=1
+set scrolloff=5
 set sidescrolloff=5
+set linebreak " for word wrapping
 set display+=lastline
 set encoding=utf-8
 set t_Co=256
