@@ -31,8 +31,8 @@ set noexpandtab
 " Set color scheme
 set background=dark
 let g:solarized_termcolors=256
-colorscheme solarized
-
+colorscheme evening
+"colorscheme solarized
 
 let mapleader = " "
 
@@ -44,6 +44,12 @@ set clipboard=unnamedplus
 
 
 " Mappings
-call togglebg#map("<F5>")
+
+map <C-n> :NERDTreeToggle<CR>
 
 inoremap jk <ESC>
+
+let mapleader = " "
+
+" write file and build
+nmap <leader>b :w<CR>:!latexmk -pdf %<CR>
