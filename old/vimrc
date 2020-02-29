@@ -54,7 +54,7 @@ filetype plugin indent on
 " }}}
 " GENERAL SETTINGS {{{1
 syntax on
-set number
+set relativenumber
 set autoread
 set confirm
 set backspace=indent,eol,start " allow backspacing over everything in insert mode

@@ -17,7 +17,7 @@ Plug 'altercation/vim-colors-solarized'
 call plug#end()
 
 " Editor experience
-set number
+set relativenumber
 set scrolloff=5
 set sidescrolloff=5
 set backspace=indent,eol,start " allow backspacing over everything in insert mode
