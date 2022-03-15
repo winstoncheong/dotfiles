@@ -66,6 +66,8 @@ let base16colorspace=256
 "colorscheme base16-gruvbox-dark-hard
 colorscheme onedark
 set background=dark
+"colorscheme solarized
+
 " True Color Support if it's avaiable in terminal
 if has("termguicolors")
     set termguicolors
@@ -115,9 +117,20 @@ let airline#extensions#ale#warning_symbol = 'W:'
 
 " Vimtex
 let g:tex_flavor  = 'latex'
-let g:tex_conceal = ''
+let g:vimtex_syntax_conceal = {
+            \ 'accents': 1,
+            \ 'cites': 1,
+            \ 'fancy': 1,
+            \ 'greek': 0,
+            \ 'math_bounds': 0,
+            \ 'math_delimiters': 1,
+            \ 'math_fracs': 1,
+            \ 'math_super_sub': 1,
+            \ 'math_symbols': 0,
+            \ 'sections': 0,
+            \ 'styles': 1,
+            \}
 let g:vimtex_fold_manual = 1
-let g:vimtex_latexmk_continuous = 1
 let g:vimtex_compiler_progname = 'nvr'
 
 " Settings for sumatraPDF
