@@ -12,6 +12,8 @@ Plug 'vim-latex/vim-latex'
 
 Plug 'scrooloose/nerdtree'
 
+Plug 'airblade/vim-gitgutter'
+
 
 " color scheme
 Plug 'altercation/vim-colors-solarized'
@@ -34,6 +36,7 @@ set autoread
 set confirm
 set encoding=utf-8
 set t_Co=256
+set cursorline " highlight current line
 
 
 " Set up tabs / indentation
@@ -41,10 +44,10 @@ set autoindent
 set smartindent
 set list
 set listchars=tab:▸\ ,eol:¬,precedes:<,extends:>
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set noexpandtab
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
+set expandtab
 
 " Set color scheme
 set background=dark
@@ -77,3 +80,15 @@ let mapleader = " "
 
 " write file and build
 nmap <leader>b :w<CR>:!latexmk -pdf %<CR>
+nmap <leader>v :!latexmk -pdf -pv %<CR>
+
+" Settings for Latex-Suite (vim-latex)
+let g:tex_flavor='latex'
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_CompileRule_pdf='latexmk -pdf -synctex=1 -interaction=nonstopmode $*'
+" from https://github.com/lervag/vimtex/issues/75
+let g:latex_viewer='SumatraPDF -reuse-instance -inverse-search '.
+            \ '"gvim --servername '.v:servername.' --remote-send \"^<C-\^>^<C-n^>'.
+            \ ':drop \%f^<CR^>:\%l^<CR^>:normal\! zzzv^<CR^>'.
+            \ ':call remote_foreground('''.v:servername.''')^<CR^>\""'
+
