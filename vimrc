@@ -82,6 +82,9 @@ let mapleader = " "
 nmap <leader>b :w<CR>:!latexmk -pdf %<CR>
 nmap <leader>v :!latexmk -pdf -pv %<CR>
 
+" quick switch to previous buffer
+nmap <leader><space> :buf #<CR>
+
 " Settings for Latex-Suite (vim-latex)
 let g:tex_flavor='latex'
 let g:Tex_DefaultTargetFormat='pdf'

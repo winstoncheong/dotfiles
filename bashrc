@@ -25,4 +25,4 @@ alias project="cd ~/Projects/"
 ## working with latex
 alias clean="latexmk -c"
 alias Clean="latexmk -C"
-
+alias latexmk="latexmk -pdf -synctex=1 "

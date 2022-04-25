@@ -1,3 +1,4 @@
+"fakesection Plugins Loading
 if has('win32') || has('win64')
   let g:plugged_home = '~/AppData/Local/nvim/plugged'
 else
@@ -11,22 +12,16 @@ call plug#begin(g:plugged_home)
     Plug 'vim-airline/vim-airline-themes'
 	Plug 'joshdick/onedark.vim'
 	"Plug 'iCyMind/NeoSolarized'
+    Plug 'altercation/vim-colors-solarized'
+    
+    " Session management
+    Plug 'tpope/vim-obsession'
 
     " Better Visual Guide
     Plug 'Yggdroot/indentLine'
 
     " syntax check
     Plug 'w0rp/ale'
-
-    " Autocomplete
-	if has('nvim')
-		Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-	else
-		Plug 'Shougo/deoplete.nvim'
-		Plug 'roxma/nvim-yarp'
-		Plug 'roxma/vim-hug-neovim-rpc'
-	endif
-	let g:deoplete#enable_at_startup = 1
 
     " Snippets
     Plug 'SirVer/ultisnips'
@@ -48,14 +43,13 @@ call plug#begin(g:plugged_home)
     Plug 'matze/vim-tex-fold'
 
     " Common plugins
-    Plug 'scrooloose/nerdtree'
-    Plug 'altercation/vim-colors-solarized'
-    Plug 'scrooloose/nerdcommenter'
+    Plug 'preservim/nerdcommenter'
+    Plug 'preservim/nerdtree'
     Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 filetype plugin indent on
 
-" Configurations Part
+"fakesection Configurations Part
 
 " UI configuration
 syntax on
@@ -94,8 +88,11 @@ set smartcase                     " turn on smartcase
 
 " Tab and Indent configuration
 set expandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
+
+" Line wrapping
+set wrap linebreak
 
 " vim-autoformat
 noremap <F3> :Autoformat<CR>
@@ -118,17 +115,17 @@ let airline#extensions#ale#warning_symbol = 'W:'
 " Vimtex
 let g:tex_flavor  = 'latex'
 let g:vimtex_syntax_conceal = {
-            \ 'accents': 1,
-            \ 'cites': 1,
-            \ 'fancy': 1,
+            \ 'accents': 0,
+            \ 'cites': 0,
+            \ 'fancy': 0,
             \ 'greek': 0,
             \ 'math_bounds': 0,
-            \ 'math_delimiters': 1,
-            \ 'math_fracs': 1,
-            \ 'math_super_sub': 1,
+            \ 'math_delimiters': 0,
+            \ 'math_fracs': 0,
+            \ 'math_super_sub': 0,
             \ 'math_symbols': 0,
             \ 'sections': 0,
-            \ 'styles': 1,
+            \ 'styles': 0,
             \}
 let g:vimtex_fold_manual = 1
 let g:vimtex_compiler_progname = 'nvr'
@@ -137,9 +134,15 @@ let g:vimtex_compiler_progname = 'nvr'
 let g:vimtex_view_general_viewer = 'SumatraPDF'
 let g:vimtex_view_general_options
     \ = '-reuse-instance -forward-search @tex @line @pdf'
-let g:vimtex_view_general_options_latexmk = '-reuse-instance'
+"let g:vimtex_view_general_options_latexmk = '-reuse-instance'
 
-" Deoplete
-call deoplete#custom#var('omni', 'input_patterns', {
-      \ 'tex': g:vimtex#re#deoplete
-      \})
+"fakesection Mappings
+map <C-n> :NERDTreeToggle<CR>
+let mapleader = " "
+
+" Open neovim dotfile
+nmap <leader>e. :e ~\AppData\Local\nvim\init.vim<CR>
+
+" Exit terminal-mode
+tnoremap <Esc> <C-\><C-n>
+
