@@ -10,7 +10,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'vim-latex/vim-latex'
 
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
+Plug 'preservim/nerdcommenter'
 
 Plug 'airblade/vim-gitgutter'
 
