@@ -10,5 +10,5 @@ cp -b -v ./gitconfig ~/.gitconfig
 cp -b -v ./init.vim ~/AppData/Local/nvim/init.vim
 
 # If spacemacs is installed..
-cp -b -v ./dotspacemacs ~/AppData/Roaming/.spacemacs
+# cp -b -v ./dotspacemacs ~/AppData/Roaming/.spacemacs
 

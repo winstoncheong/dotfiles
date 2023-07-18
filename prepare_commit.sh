@@ -5,4 +5,4 @@
 cp -b -v ~/.vimrc ./vimrc
 cp -b -v ~/.bashrc ./bashrc
 cp -b -v ~/AppData/Local/nvim/init.vim ./init.vim
-cp -b -v ~/AppData/Roaming/.spacemacs ./dotspacemacs
+cp -v ~/AppData/Roaming/.spacemacs ./dotspacemacs_`hostname`_`date +"%y-%m-%d"`
