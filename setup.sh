@@ -4,6 +4,7 @@
 
 cp -b -v ./vimrc ~/.vimrc
 cp -b -v ./bashrc ~/.bashrc
+cp -b -v ./gitconfig ~/.gitconfig
 
 # If neovim is installed...
 cp -b -v ./init.vim ~/AppData/Local/nvim/init.vim
