@@ -9,6 +9,7 @@ Plug 'tpope/vim-commentary'
 Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'vim-latex/vim-latex'
+Plug 'lervag/vimtex'
 
 Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
@@ -81,7 +82,9 @@ let mapleader = " "
 
 " write file and build
 nmap <leader>b :w<CR>:!latexmk -pdf %<CR>
-nmap <leader>v :!latexmk -pdf -pv %<CR>
+nmap <leader>v :!latexmk -pdf -interaction=batchmode -pv %<CR>
+" nmap <leader>l :!latexmk -pdf %<CR><CR>
+nmap <leader>c :!latexmk -pdf -interaction=batchmode %<CR><CR>
 
 " quick switch to previous buffer
 nmap <leader><space> :buf #<CR>

@@ -6,12 +6,18 @@ else
 endif
 " Plugins List
 call plug#begin(g:plugged_home)
+
+    Plug 'tpope/vim-sensible'
+    Plug 'tpope/vim-fugitive'
+    Plug 'tpope/vim-surround'
+    Plug 'tpope/vim-commentary'
+
     " UI related
     Plug 'chriskempson/base16-vim'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
-	Plug 'joshdick/onedark.vim'
-	"Plug 'iCyMind/NeoSolarized'
+    Plug 'joshdick/onedark.vim'
+    "Plug 'iCyMind/NeoSolarized'
     Plug 'altercation/vim-colors-solarized'
     
     " Session management
@@ -38,6 +44,7 @@ call plug#begin(g:plugged_home)
     Plug 'Chiel92/vim-autoformat'
   
     " --------- adding the following three plugins for Latex ---------
+    Plug 'vim-latex/vim-latex'
     Plug 'lervag/vimtex'
     Plug 'Konfekt/FastFold'
     Plug 'matze/vim-tex-fold'
@@ -66,9 +73,9 @@ set background=dark
 if has("termguicolors")
     set termguicolors
 endif
-if has("gui_running")
-  set guicursor=n-v-c-sm:block,i-ci-ve:block,r-cr-o:blocks
-endif
+" if has("gui_running")
+"   set guicursor=n-v-c-sm:block,i-ci-ve:block,r-cr-o:blocks
+" endif
 set number
 set relativenumber
 set hidden
@@ -127,8 +134,21 @@ let g:vimtex_syntax_conceal = {
             \ 'sections': 0,
             \ 'styles': 0,
             \}
+set conceallevel=0 " Disable all concealing done by vimtex
 let g:vimtex_fold_manual = 1
 let g:vimtex_compiler_progname = 'nvr'
+
+" Settings for Latex-Suite (vim-latex)
+let g:tex_flavor='latex'
+let g:Tex_DefaultTargetFormat='pdf'
+let g:Tex_CompileRule_pdf='latexmk -pdf -synctex=1 -interaction=nonstopmode $*'
+
+" from https://github.com/lervag/vimtex/issues/75
+let g:latex_viewer='SumatraPDF -reuse-instance -inverse-search '.
+            \ '"gvim --servername '.v:servername.' --remote-send \"^<C-\^>^<C-n^>'.
+            \ ':drop \%f^<CR^>:\%l^<CR^>:normal\! zzzv^<CR^>'.
+            \ ':call remote_foreground('''.v:servername.''')^<CR^>\""'
+
 
 " Settings for sumatraPDF
 let g:vimtex_view_general_viewer = 'SumatraPDF'
