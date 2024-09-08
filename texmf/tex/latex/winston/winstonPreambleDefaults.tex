@@ -1,0 +1,27 @@
+
+
+\input{winstonPackages.tex}
+\input{winstonAlphabets.tex}
+\input{winstonMathMacros.tex}
+\input{winstonOtherMacros.tex}
+\input{winstonTheoremCommon.tex}
+
+\usepackage{hyperref}
+\hypersetup{%
+    colorlinks=true,
+    linkcolor=RoyalBlue,
+    filecolor=magenta,
+    urlcolor=RubineRed,
+    citecolor=ForestGreen,
+    bookmarksopen=true,
+    bookmarksnumbered=true,
+}
+\usepackage[nameinlink]{cleveref} % cleveref must be after hyperref
+% cleveref must be before any \declaretheorem, otherwise identifier error
+
+\theoremstyle{definition}
+
+\input{winstonTheoremFancy.tex}
+% \input{winstonTheoremPlain.tex}
+% \input{winstonTheoremProblemPlain.tex}
+\input{winstonTheoremProblemFancy.tex}
