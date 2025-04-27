@@ -18,11 +18,22 @@ alias lar="ls -laR"
 ## Navigation
 alias up='cd ..'
 alias read="cd ~/Dropbox/workspace/notes/reading\ notes/"
-alias soln="cd ~/Dropbox/workspace/solutions/"
 alias work="cd ~/Dropbox/workspace/"
-alias project="cd ~/Projects/"
+alias proj="cd ~/Projects/"
+alias sln="cd ~/projects/notes/solutions"
+alias notes="cd ~/projects/notes"
+alias nvimrc="cd ~/AppData/Local/nvim/"
+
+## open specific files
+alias bib="cd ~/texmf/bibtex/bib/"
+alias bibfile="nvim ~/texmf/bibtex/bib/refs.bib"
 
 ## working with latex
 alias clean="latexmk -c"
 alias Clean="latexmk -C"
-alias latexmk="latexmk -pdf -synctex=1 "
+alias latexmk="latexmk -pdf -synctex=1 -interaction=batchmode"
+
+
+# export PATH=~/AppData/Roaming/Python/Python312/Scripts:$PATH
+# export PATH=$PATH:~/scoop/apps/luarocks/current
+# export PATH=$PATH:~/scoop/apps/lua/current
