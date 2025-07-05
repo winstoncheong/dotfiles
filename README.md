@@ -18,3 +18,14 @@ Their website says to run `git clone https://github.com/syl20bnr/spacemacs ~/.em
 
 Due to the template .spacemacs file tending to change, and my configurations to be different between machines, I'm opted to store multiple version of the   `dotspacemacs` config. 
 Everything is handled in `prepare_commit.sh`.
+
+## texmf
+
+Use 
+
+```sh
+kpsewhich -var-value=TEXMFHOME
+```
+
+to determine where the directory `texmf` goes. 
+(from https://tex.stackexchange.com/a/1138)
