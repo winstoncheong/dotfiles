@@ -2,7 +2,7 @@
 	name = Winston Cheong
 	email = cheong.winston1337@gmail.com
 [core]
-	editor = vim
+	editor = nvim
 	pager = less -+F
 [color]
 	ui = true
