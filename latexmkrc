@@ -31,6 +31,7 @@ $do_cd = 1;
 # We always want to generate PDF files, not the old DVI/PS formats.
 $dvi_mode = 0;
 $postscript_mode = 0;
+$pdf_mode = 1;
 
 # SyncTeX gives certain editors and PDF viewers a way to jump like in Overleaf.
 # So we just always enable this option by default.
