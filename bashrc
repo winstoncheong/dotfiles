@@ -21,6 +21,8 @@ alias read="cd ~/Dropbox/workspace/notes/reading\ notes/"
 alias work="cd ~/Dropbox/workspace/"
 alias proj="cd ~/Projects/"
 alias notes="cd ~/projects/notes"
+alias sln="cd ~/Projects/notes/solutions/"
+alias nvimrc="cd ~/AppData/Local/nvim/"
 
 ## open specific files
 alias bib="cd ~/texmf/bibtex/bib/"
